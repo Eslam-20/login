@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <span class="d-none" id="username"></span>
+    <div class="container my-0 text-center">
+        <form id="signup-form" class="group mt-0 mb-0 p-5">
+            <h1>Smart Login System</h1>
+
+            <!-- Sign Up Fields -->
+            <input id="signupName" class="form-control my-3" placeholder="Enter your name" type="text" required>
+            <input id="signupEmail" class="form-control my-3" placeholder="Enter your email" type="email" required>
+            <input id="signupPassword" class="form-control my-3" placeholder="Enter your password" type="password" required>
+            <p id="signupError" class="text-danger"></p>
+
+            <button type="button" onclick="signup()" class="btn btn-outline-success w-100 my-3">Sign Up</button>
+            <p class="text-white">Already have an account? <a class="text-white" href="javascript:showLogin()">Login</a></p>
+        </form>
+
+        <!-- Login Form -->
+        <form id="login-form" class="group mt-0 mb-0 p-5 d-none">
+            <h1>Sign In</h1>
+
+            <!-- Sign In Fields -->
+            <input id="signinE" class="form-control my-3" placeholder="Enter your email" type="email" required>
+            <input id="signinP" class="form-control my-3" placeholder="Enter your password" type="password" required>
+            <p id="incorrect" class="text-danger"></p>
+
+            <button type="button" onclick="login()" class="btn btn-outline-info w-100 my-3">Login</button>
+            <p class="text-white">Don't have an account? <a class="text-white" href="javascript:showSignup()">Sign Up</a></p>
+        </form>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
